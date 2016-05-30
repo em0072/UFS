@@ -81,21 +81,61 @@
 			children = (
 				75BD8C601CFCD0950016D589 /* AppDelegate.swift */,
 				75BD8C611CFCD0950016D589 /* Assets.xcassets */,
-				75BD8C651CFCD0950016D589 /* Constants.swift */,
-				75BD8C661CFCD0950016D589 /* Friend.swift */,
-				75BD8C671CFCD0950016D589 /* FriendDetailViewController.swift */,
-				75BD8C681CFCD0950016D589 /* FriendsViewController.swift */,
-				75BD8C691CFCD0950016D589 /* FriendTableViewCell.swift */,
-				75BD8C6A1CFCD0950016D589 /* Group.swift */,
-				75BD8C6B1CFCD0950016D589 /* Info.plist */,
-				75BD8C631CFCD0950016D589 /* Main.storyboard */,
-				75BD8C6C1CFCD0950016D589 /* LaunchScreen.storyboard */,
-				75BD8C6D1CFCD0950016D589 /* Parser.swift */,
-				75BD8C6E1CFCD0950016D589 /* Request.swift */,
-				75BD8C6F1CFCD0950016D589 /* ViewController.swift */,
-				75BD8C5D1CFCCFDA0016D589 /* UFS-Bridging-Header.h */,
+				75BD8C801CFCD10F0016D589 /* Model */,
+				75BD8C7F1CFCD1020016D589 /* ViewControllers */,
+				75BD8C821CFCD1320016D589 /* View */,
+				75BD8C7E1CFCD0F70016D589 /* Support */,
 			);
 			path = UFS;
+			sourceTree = "<group>";
+		};
+		75BD8C7E1CFCD0F70016D589 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				75BD8C651CFCD0950016D589 /* Constants.swift */,
+				75BD8C6B1CFCD0950016D589 /* Info.plist */,
+				75BD8C5D1CFCCFDA0016D589 /* UFS-Bridging-Header.h */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		75BD8C7F1CFCD1020016D589 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				75BD8C671CFCD0950016D589 /* FriendDetailViewController.swift */,
+				75BD8C681CFCD0950016D589 /* FriendsViewController.swift */,
+				75BD8C6F1CFCD0950016D589 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		75BD8C801CFCD10F0016D589 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75BD8C661CFCD0950016D589 /* Friend.swift */,
+				75BD8C6A1CFCD0950016D589 /* Group.swift */,
+				75BD8C811CFCD1160016D589 /* Data proccessing */,
+				75BD8C691CFCD0950016D589 /* FriendTableViewCell.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		75BD8C811CFCD1160016D589 /* Data proccessing */ = {
+			isa = PBXGroup;
+			children = (
+				75BD8C6D1CFCD0950016D589 /* Parser.swift */,
+				75BD8C6E1CFCD0950016D589 /* Request.swift */,
+			);
+			name = "Data proccessing";
+			sourceTree = "<group>";
+		};
+		75BD8C821CFCD1320016D589 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75BD8C631CFCD0950016D589 /* Main.storyboard */,
+				75BD8C6C1CFCD0950016D589 /* LaunchScreen.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		831E2AB96DDD5A497C9B59A3 /* Pods */ = {
