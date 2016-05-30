@@ -1,0 +1,13 @@
+PODS:
+  - SAMCache (0.3.3)
+  - VK-ios-sdk (1.3.17)
+
+DEPENDENCIES:
+  - SAMCache
+  - VK-ios-sdk
+
+SPEC CHECKSUMS:
+  SAMCache: 790b2623a3e087c903daff872c90c248726c4c82
+  VK-ios-sdk: 671b7bc84596da7040544eb848b3c71787906fbd
+
+COCOAPODS: 0.39.0
