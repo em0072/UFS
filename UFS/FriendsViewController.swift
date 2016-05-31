@@ -23,7 +23,10 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     var refreshControl = UIRefreshControl()
     var selectedFriend: Friend?
     var isSearching = false
+    let service = Service()
     
+    
+    //MARK: - View Flow Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setAppearence()
@@ -37,7 +40,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         refresh()
     }
     
-    //MARK: Scroll View Delegate
+    //MARK: - Scroll View Delegate
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let offsetY = self.tableView.contentOffset.y
         for cell in self.tableView.visibleCells as! [FriendTableViewCell] {
@@ -122,7 +125,13 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
             let vc = segue.destinationViewController as! FriendDetailViewController
             if let friendToPass = selectedFriend {
                 vc.friend = friendToPass
+                if let fName = selectedFriend?.firstName, let lName = selectedFriend?.lastName {
+                    let backItem = UIBarButtonItem()
+                    backItem.title = "\(fName) \(lName)"
+                    navigationItem.backBarButtonItem = backItem
+                }
             }
+            
         }
     }
     
@@ -139,7 +148,9 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func setPullToRefresh() {
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        let attributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh", attributes: attributes)
+        refreshControl.tintColor = UIColor.whiteColor()
         refreshControl.addTarget(self, action: #selector(FriendsViewController.refresh), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
     }
@@ -163,6 +174,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.tableView.reloadData()
             self.activityIndicator.stopAnimating()
             self.tableView.userInteractionEnabled = true
+            self.navigationItem.title = "You have \(friends.count) friends"
         }
     }
     

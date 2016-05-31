@@ -15,8 +15,9 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     let SCOPE = [VK_PER_FRIENDS, VK_PER_GROUPS]
+    let service = Service()
     
-    
+    // MARK: - View Flow Methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,20 +33,18 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
         self.navigationController?.navigationBarHidden = false
     }
     
+    //MARK: - vkSDK Methods
     func vkSdkAccessAuthorizationFinishedWithResult(result: VKAuthorizationResult!) {
         if (result.token != nil)  {
             print("vkSdk Access Authorization Finished With Result User")
             showFriendsTableView(true)
         } else if (result.error != nil) {
-            print("vkSdk Access Authorization Finished With Result error")
+            service.showAlertWithText("Access Authorization Finished With Error", on: self)
         }
     }
     
-    /**
-     Notifies about access error. For example, this may occurs when user rejected app permissions through VK.com
-     */
     func vkSdkUserAuthorizationFailed() {
-        
+        service.showAlertWithText("User Authorization Finished With Error", on: self)
     }
     
     func vkSdkNeedCaptchaEnter(captchaError: VKError!) {
@@ -56,18 +55,6 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
         self.presentViewController(controller, animated: true) { 
             print("done presenting VC")
         }
-    }
-    
-    
-    func  showFriendsTableView(animated: Bool) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("friendsList")
-        self.navigationController?.pushViewController(vc, animated: animated)
-    }
-
-
-    @IBAction func AuthorizationButtonTapped(sender: AnyObject) {
-        VKSdk.authorize(SCOPE)
     }
     
     func initializeVK() {
@@ -85,12 +72,26 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
                 print("User is logged? \(VKSdk.isLoggedIn())")
                 self.showFriendsTableView(true)
             } else if state == .Error {
-                print("Error")
+                self.service.showAlertWithText("VK.com can't determine session state", on: self)
             } else {
                 print("Else VKAuthorisationState")
             }
         }
-
+        
     }
+    
+    //MARK: - Helper Methods
+    func  showFriendsTableView(animated: Bool) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("friendsList")
+        self.navigationController?.pushViewController(vc, animated: animated)
+    }
+
+
+    //MARK: - IBActions
+    @IBAction func AuthorizationButtonTapped(sender: AnyObject) {
+        VKSdk.authorize(SCOPE)
+    }
+    
 }
 

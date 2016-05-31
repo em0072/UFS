@@ -29,7 +29,7 @@ class Request {
     }
     
     func groups(userId: Int, completion: ([Group]) -> ()) {
-        let request: VKRequest = VKApi.requestWithMethod("groups.get", andParameters: [VK_API_USER_ID: 2144227, "extended" : 1])
+        let request: VKRequest = VKApi.requestWithMethod("groups.get", andParameters: [VK_API_USER_ID: userId, "extended" : 1])
         request.executeWithResultBlock({ (responce) in
             if let group = self.parser.composeGroupsFromJSON(responce.json) {
                 completion(group)

@@ -75,9 +75,9 @@ class Parser {
         if let type = groupDict["type"] as? String {
             group.type = type
         }
-        if let photoPath = groupDict[BIG_PHOTO] as? String {
+        if let photoPath = groupDict[SMALL_PHOTO] as? String {
             group.photoPath = photoPath
-        } else if let photoPath = groupDict[SMALL_PHOTO] as? String {
+        } else if let photoPath = groupDict[BIG_PHOTO] as? String {
             group.photoPath = photoPath
         }
         

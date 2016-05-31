@@ -16,12 +16,13 @@
 		75BD8C761CFCD0950016D589 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BD8C681CFCD0950016D589 /* FriendsViewController.swift */; };
 		75BD8C771CFCD0950016D589 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BD8C691CFCD0950016D589 /* FriendTableViewCell.swift */; };
 		75BD8C781CFCD0950016D589 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BD8C6A1CFCD0950016D589 /* Group.swift */; };
-		75BD8C791CFCD0950016D589 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75BD8C6B1CFCD0950016D589 /* Info.plist */; };
 		75BD8C7A1CFCD0950016D589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BD8C6C1CFCD0950016D589 /* LaunchScreen.storyboard */; };
 		75BD8C7B1CFCD0950016D589 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BD8C6D1CFCD0950016D589 /* Parser.swift */; };
 		75BD8C7C1CFCD0950016D589 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BD8C6E1CFCD0950016D589 /* Request.swift */; };
 		75BD8C7D1CFCD0950016D589 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BD8C6F1CFCD0950016D589 /* ViewController.swift */; };
-		DB8C5CD4769D8DBDA4978B01 /* Pods_UFS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0A748B5E299AEFA9C6E8C7 /* Pods_UFS.framework */; };
+		75BD8C851CFCD2DE0016D589 /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BD8C841CFCD2DE0016D589 /* GroupCollectionViewCell.swift */; };
+		75BD8C871CFD61180016D589 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BD8C861CFD61180016D589 /* Service.swift */; };
+		BB5FA9035A0E6EC7DDAE0BD4 /* Pods_UFS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0A748B5E299AEFA9C6E8C7 /* Pods_UFS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,11 +38,13 @@
 		75BD8C681CFCD0950016D589 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		75BD8C691CFCD0950016D589 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		75BD8C6A1CFCD0950016D589 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		75BD8C6B1CFCD0950016D589 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75BD8C6C1CFCD0950016D589 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75BD8C6D1CFCD0950016D589 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		75BD8C6E1CFCD0950016D589 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		75BD8C6F1CFCD0950016D589 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75BD8C841CFCD2DE0016D589 /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		75BD8C861CFD61180016D589 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		75BD8C9A1CFD64480016D589 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B876398AF4A6FC977F001A71 /* Pods-UFS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFS.release.xcconfig"; path = "Pods/Target Support Files/Pods-UFS/Pods-UFS.release.xcconfig"; sourceTree = "<group>"; };
 		E2C37F765CA94072DECC9C7C /* Pods-UFS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UFS/Pods-UFS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8C5CD4769D8DBDA4978B01 /* Pods_UFS.framework in Frameworks */,
+				BB5FA9035A0E6EC7DDAE0BD4 /* Pods_UFS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				75BD8C651CFCD0950016D589 /* Constants.swift */,
-				75BD8C6B1CFCD0950016D589 /* Info.plist */,
+				75BD8C9A1CFD64480016D589 /* Info.plist */,
+				75BD8C861CFD61180016D589 /* Service.swift */,
 				75BD8C5D1CFCCFDA0016D589 /* UFS-Bridging-Header.h */,
 			);
 			name = Support;
@@ -115,7 +119,7 @@
 				75BD8C661CFCD0950016D589 /* Friend.swift */,
 				75BD8C6A1CFCD0950016D589 /* Group.swift */,
 				75BD8C811CFCD1160016D589 /* Data proccessing */,
-				75BD8C691CFCD0950016D589 /* FriendTableViewCell.swift */,
+				75BD8C831CFCD2BF0016D589 /* Cells */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -136,6 +140,15 @@
 				75BD8C6C1CFCD0950016D589 /* LaunchScreen.storyboard */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		75BD8C831CFCD2BF0016D589 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				75BD8C691CFCD0950016D589 /* FriendTableViewCell.swift */,
+				75BD8C841CFCD2DE0016D589 /* GroupCollectionViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		831E2AB96DDD5A497C9B59A3 /* Pods */ = {
@@ -190,6 +203,7 @@
 				TargetAttributes = {
 					75BD8C471CFCCFC80016D589 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 65952893XA;
 					};
 				};
 			};
@@ -219,7 +233,6 @@
 				75BD8C711CFCD0950016D589 /* Assets.xcassets in Resources */,
 				75BD8C7A1CFCD0950016D589 /* LaunchScreen.storyboard in Resources */,
 				75BD8C721CFCD0950016D589 /* Main.storyboard in Resources */,
-				75BD8C791CFCD0950016D589 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,9 +292,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				75BD8C7D1CFCD0950016D589 /* ViewController.swift in Sources */,
+				75BD8C851CFCD2DE0016D589 /* GroupCollectionViewCell.swift in Sources */,
 				75BD8C781CFCD0950016D589 /* Group.swift in Sources */,
 				75BD8C741CFCD0950016D589 /* Friend.swift in Sources */,
 				75BD8C761CFCD0950016D589 /* FriendsViewController.swift in Sources */,
+				75BD8C871CFD61180016D589 /* Service.swift in Sources */,
 				75BD8C701CFCD0950016D589 /* AppDelegate.swift in Sources */,
 				75BD8C7B1CFCD0950016D589 /* Parser.swift in Sources */,
 				75BD8C771CFCD0950016D589 /* FriendTableViewCell.swift in Sources */,
@@ -397,7 +412,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = UFS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.evgenymitko.UFS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,7 +429,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = UFS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.evgenymitko.UFS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
